@@ -13,6 +13,7 @@ class WebServer {
     static var shared = WebServer()
     private(set) var events: [Event] = []
     private let webServer = GCDWebServer()
+    var ipAddress: String?
     
     private init() {}
     
@@ -42,7 +43,7 @@ class WebServer {
         }
 
         webServer.start(withPort: port, bonjourName: "GCD Web Server")
-        print("Visit \(webServer.serverURL!) in your web browser")
+        ipAddress = webServer.serverURL?.absoluteString ?? ""
     }
     
     static func addEvent(_ event: Event) {

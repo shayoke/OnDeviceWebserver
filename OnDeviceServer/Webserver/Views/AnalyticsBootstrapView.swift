@@ -38,18 +38,16 @@ struct AnalyticsBootstrapView: BootstrapView {
         var buttons = items.map { platform -> ButtonWithBadge in
             return ButtonWithBadge(title: platform, badgeCounter: 2, link: LinkHTML(string: "?platform=\(platform)"))
         }
-        
+
         buttons.insert(ButtonWithBadge(title: "Remove Filter", badgeCounter: 2, link: LinkHTML(string: "?")), at: 0)
-        
-        //  items.map { ButtonWithBadge(title: $0, badgeCounter: 3, link: Link(destination: Page(rawValue: $0) ?? .index)) }
         return Row(children: buttons)
     }
     
-    var alertCardDateFormatter: DateFormatter {
+    let alertCardDateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm:ss"
         return formatter
-    }
+    }()
     
     private func generateAlerts() -> BootstrapView {
         var logs = [LogItem]()
@@ -66,7 +64,7 @@ struct AnalyticsBootstrapView: BootstrapView {
             let formattedDate = alertCardDateFormatter.string(from: logItem.timestamp)
             return Card(headerText: logItem.platform, title: logItem.message, text: "", button: nil, footerText: formattedDate)
         }
-        
+
         return CardColumns(children: cards)
     }
 }

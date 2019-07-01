@@ -87,9 +87,7 @@ struct LogItem {
 class AnalyticsDebugger {
     static var shared = AnalyticsDebugger()
     var logs = [LogItem]()
-    
 
-    
     private init(){}
     
     func log(_ message: String, platform: String) {

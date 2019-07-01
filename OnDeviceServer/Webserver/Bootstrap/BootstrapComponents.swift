@@ -162,3 +162,17 @@ struct Button: BootstrapView {
         """
     }
 }
+
+
+extension Container {
+    init(closure: () -> [BootstrapView]) {
+        self.init(children: closure())
+    }
+}
+
+extension Row {
+    init(closure: () -> [BootstrapView]) {
+        self.init(children: closure())
+    }
+}
+

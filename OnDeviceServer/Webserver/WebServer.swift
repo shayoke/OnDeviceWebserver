@@ -34,16 +34,16 @@ class WebServer {
         webServer.addDefaultHandler(forMethod: "GET", request: GCDWebServerRequest.self, processBlock: { request in
             let path = request.path
             let pages: [Page] =  Page.allCases
-            var builtHTML: Page? = nil
-            let pathnames = pages.filter { "/\($0.rawValue)" == path }
+            let resolvedPath = pages.filter { "/\($0.rawValue)" == path }.first
             
-            if let resolvedPath = pathnames.first {
-                builtHTML = resolvedPath
-            } else if path == "" {
-                builtHTML = pages.first
+            guard let firstPage = pages.first?.rawValue else {
+                return GCDWebServerResponse()
+            }
+
+            guard let html = resolvedPath?.buildPage() else {
+                return GCDWebServerResponse(redirect: URL(string: firstPage)!, permanent: true)
             }
             
-            let html = builtHTML?.buildPage() ?? IndexBootstrapView().make()
             return GCDWebServerDataResponse(html: html)
         })
 

@@ -144,13 +144,21 @@ struct Card: BootstrapView {
     }
 }
 
+struct Link: BootstrapView {
+    let destination: Page
+    
+    func make() -> String {
+        return "/\(destination.rawValue)"
+    }
+}
+
 struct Button: BootstrapView {
     let text: String
-    let link: String
+    let link: Link
 
     func make() -> String {
         return """
-        <a href="\(link)" class="btn btn-primary">\(text)</a>
+        <a href="\(link.make())" class="btn btn-primary">\(text)</a>
         """
     }
 }

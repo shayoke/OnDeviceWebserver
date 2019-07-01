@@ -14,9 +14,7 @@ class WebServer {
     private(set) var events: [Event] = []
     private let webServer = GCDWebServer()
     
-    private init() {
-        
-    }
+    private init() {}
     
     let port: UInt = 8080
     
@@ -34,8 +32,18 @@ class WebServer {
         WebServer.loggingLevel = 4
 
         webServer.addDefaultHandler(forMethod: "GET", request: GCDWebServerRequest.self, processBlock: { request in
-            let html = IndexBootstrapView().make()
-            print("HTML BEGIN:\n", html)
+            let path = request.path
+            let pages: [Page] =  Page.allCases
+            var builtHTML: Page? = nil
+            let pathnames = pages.filter { "/\($0.rawValue)" == path }
+            
+            if let resolvedPath = pathnames.first {
+                builtHTML = resolvedPath
+            } else if path == "" {
+                builtHTML = pages.first
+            }
+            
+            let html = builtHTML?.buildPage() ?? IndexBootstrapView().make()
             return GCDWebServerDataResponse(html: html)
         })
 

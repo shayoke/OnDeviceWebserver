@@ -16,6 +16,7 @@ struct IndexBootstrapView: BootstrapView {
                 Row(children: [
                     Column(size: 1, children: [
                          FlushList(listItems: ["Number of events: \(WebServer.shared.events.count)"]),
+                         Card(headerText: "CARD HEADER", title: "CARD TITLE", text: "This is card body text", button: Button(text: "Button text", link: "#"))
                         ]),
                     Column(size: nil, children: [
                         EventsBootstrapView(),

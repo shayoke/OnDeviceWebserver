@@ -113,3 +113,44 @@ struct FlushList: BootstrapView {
         """
     }
 }
+
+struct Card: BootstrapView {
+    let headerText: String?
+    let title: String
+    let text: String
+    let button: Button?
+
+    private func generateHeaderTextHtml() -> String {
+        guard let headerText = headerText else {
+            return ""
+        }
+
+        return """
+        <div class="card-header">\(headerText)</div>
+        """
+    }
+
+    func make() -> String {
+        return """
+        <div class="card">
+        \(generateHeaderTextHtml())
+        <div class="card-body">
+        <h5 class="card-title">\(title)</h5>
+        <p class="card-text">\(text)</p>
+        \(button?.make() ?? "")
+        </div>
+        </div>
+        """
+    }
+}
+
+struct Button: BootstrapView {
+    let text: String
+    let link: String
+
+    func make() -> String {
+        return """
+        <a href="\(link)" class="btn btn-primary">\(text)</a>
+        """
+    }
+}

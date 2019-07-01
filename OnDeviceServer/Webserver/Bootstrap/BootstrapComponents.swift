@@ -38,6 +38,18 @@ struct Column: BootstrapView {
     }
 }
 
+struct CardColumns: BootstrapView {
+    let children: [BootstrapView]
+    
+    func make() -> String {
+        return """
+        <div class="card-columns">
+        \(generateString(from: children))
+        </div>
+        """
+    }
+}
+
 struct Jumbotron: BootstrapView {
     let title: String
     let subtitle: String
@@ -120,26 +132,40 @@ struct Card: BootstrapView {
     let title: String
     let text: String
     let button: Button?
-
+    let footerText: String?
+    
     private func generateHeaderTextHtml() -> String {
         guard let headerText = headerText else {
             return ""
         }
-
+        
         return """
         <div class="card-header">\(headerText)</div>
         """
     }
-
+    
+    private func generateFooterTextHtml() -> String {
+        guard let footerText = footerText else {
+            return ""
+        }
+        
+        return """
+        <div class="card-footer">
+        <small class="text-muted">\(footerText)</small>
+        </div>
+        """
+    }
+    
     func make() -> String {
         return """
-        <div class="card" style="width: 24rem;">
+        <div class="card" style="width: 22rem;">
         \(generateHeaderTextHtml())
         <div class="card-body">
         <h5 class="card-title">\(title)</h5>
         <p class="card-text">\(text)</p>
         \(button?.make() ?? "")
         </div>
+        \(generateFooterTextHtml())
         </div>
         """
     }
@@ -164,7 +190,7 @@ struct LinkHTML: BootstrapView {
 struct Button: BootstrapView {
     let text: String
     let link: PageLink
-
+    
     func make() -> String {
         return """
         <a href="\(link.make())" class="btn btn-primary">\(text)</a>

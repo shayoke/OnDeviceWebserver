@@ -42,7 +42,8 @@ struct PageCard: BootstrapView {
             title: "<h4>\(page.rawValue.capitalized)</h4>",
             text: page.description,
             button: Button(text: "Open",
-                           link: PageLink(destination: page))
+                           link: PageLink(destination: page)),
+            footerText: nil
             ).make()
     }
 }

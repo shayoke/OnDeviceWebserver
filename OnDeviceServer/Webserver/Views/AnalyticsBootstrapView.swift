@@ -45,6 +45,12 @@ struct AnalyticsBootstrapView: BootstrapView {
         return Row(children: buttons)
     }
     
+    var alertCardDateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm:ss"
+        return formatter
+    }
+    
     private func generateAlerts() -> BootstrapView {
         var logs = [LogItem]()
         
@@ -56,11 +62,12 @@ struct AnalyticsBootstrapView: BootstrapView {
        
         logs = logs.sorted { $0.timestamp > $1.timestamp }
         
-        let cards = logs.map { logItem in
-            return Card(headerText: logItem.platform, title: logItem.message, text: "", button: nil)
+        let cards = logs.map { logItem -> Card in
+            let formattedDate = alertCardDateFormatter.string(from: logItem.timestamp)
+            return Card(headerText: logItem.platform, title: logItem.message, text: "", button: nil, footerText: formattedDate)
         }
         
-        return CardDeck(cards: cards)
+        return CardColumns(children: cards)
     }
 }
 

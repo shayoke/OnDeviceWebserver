@@ -28,6 +28,7 @@ struct Column: BootstrapView {
         
         return classTagPrefix
     }
+    
     func make() -> String {
         return """
         <div class="\(classTagPrefix)">
@@ -55,7 +56,7 @@ struct Container: BootstrapView {
     let children: [BootstrapView]
     func make() -> String {
         return """
-        <div class="container">
+        <div class="container" style="padding: 2rem;">
         \(generateString(from: children))
         </div>
         """
@@ -132,7 +133,7 @@ struct Card: BootstrapView {
 
     func make() -> String {
         return """
-        <div class="card">
+        <div class="card" style="width: 24rem;">
         \(generateHeaderTextHtml())
         <div class="card-body">
         <h5 class="card-title">\(title)</h5>
@@ -144,7 +145,7 @@ struct Card: BootstrapView {
     }
 }
 
-struct Link: BootstrapView {
+struct PageLink: BootstrapView {
     let destination: Page
     
     func make() -> String {
@@ -152,13 +153,33 @@ struct Link: BootstrapView {
     }
 }
 
+struct LinkHTML: BootstrapView {
+    let string: String
+    
+    func make() -> String {
+        return string
+    }
+}
+
 struct Button: BootstrapView {
     let text: String
-    let link: Link
+    let link: PageLink
 
     func make() -> String {
         return """
         <a href="\(link.make())" class="btn btn-primary">\(text)</a>
+        """
+    }
+}
+
+struct CardDeck: BootstrapView {
+    let cards: [BootstrapView]
+    
+    func make() -> String {
+        return """
+        <div class="card-deck">
+        \(generateString(from: cards))
+        </div>
         """
     }
 }

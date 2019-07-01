@@ -31,21 +31,15 @@ class WebServer {
     private func start() {
         WebServer.loggingLevel = 4
 
-        webServer.addDefaultHandler(forMethod: "GET", request: GCDWebServerRequest.self, processBlock: { request in
+        webServer.addDefaultHandler(forMethod: "GET", request: GCDWebServerRequest.self) { request in
             let path = request.path
-            let pages: [Page] =  Page.allCases
-            let resolvedPath = pages.filter { "/\($0.rawValue)" == path }.first
-            
-            guard let firstPage = pages.first?.rawValue else {
-                return GCDWebServerResponse()
+
+            guard let html = Page.html(for: path, queries: request.query) else {
+                return GCDWebServerResponse(redirect: Page.indexURL, permanent: true)
             }
 
-            guard let html = resolvedPath?.buildPage() else {
-                return GCDWebServerResponse(redirect: URL(string: firstPage)!, permanent: true)
-            }
-            
             return GCDWebServerDataResponse(html: html)
-        })
+        }
 
         webServer.start(withPort: port, bonjourName: "GCD Web Server")
         print("Visit \(webServer.serverURL!) in your web browser")

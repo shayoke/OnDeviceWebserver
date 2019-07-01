@@ -14,8 +14,12 @@ struct IndexBootstrapView: BootstrapView {
             DefaultNavBar(),
             Jumbotron(title: "Connected to device", subtitle: "This is a subtitle"),
             Container { [
-                Row {[HTMLBootstrapView(html: "<h3>Pages</h3>")]},
-                Row {[PagesListBootstrapView()]},
+                Row(children: [
+                    Column(size: 4, children: [
+                        Row {[HTMLBootstrapView(html: "<h3>Pages</h3>")]},
+                        Row {[PagesListBootstrapView()]},
+                        ]),
+                    ]),
                 ]},
             ]).make()
     }
@@ -25,9 +29,7 @@ struct PagesListBootstrapView: BootstrapView {
     private let pages = Page.allCases
     
     func make() -> String {
-        // Transform a page into a list of columns
-        let cardColumns = pages.map { Column(size: 4, children: [PageCard(page: $0)]) }
-        return Row(children: cardColumns).make()
+        return CardDeck(cards: pages.map { PageCard(page: $0) }).make()
     }
 }
 
@@ -35,12 +37,13 @@ struct PageCard: BootstrapView {
     let page: Page
     
     func make() -> String {
-        return Card(
+        return Card (
             headerText: "/\(page.rawValue)",
             title: "<h4>\(page.rawValue.capitalized)</h4>",
-            text: "Click to open",
-            button: Button(text: "Go",
-                           link: Link(destination: page))).make()
+            text: page.description,
+            button: Button(text: "Open",
+                           link: PageLink(destination: page))
+            ).make()
     }
 }
 

@@ -9,12 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        WebServer.startServer()
+        WebServer.addEvent(Event(message: "Web server started successfully"))
+        WebServer.addEvent(Event(message: "Web server started successfully"))
+        WebServer.addEvent(Event(message: "Web server started successfully"))
+        WebServer.addEvent(Event(message: "Web server started successfully"))
+        WebServer.addEvent(Event(message: "Web server started successfully"))
+        WebServer.addEvent(Event(message: "Web server started successfully"))
+        WebServer.addEvent(Event(message: "Web server started successfully"))
+        WebServer.addEvent(Event(message: "Web server started successfully"))
+        WebServer.addEvent(Event(message: "Web server started successfully"))
     }
-
-
 }
 

@@ -11,7 +11,7 @@ import Foundation
 struct LoremBootstrapView: BootstrapView {
     func make() -> String {
         return BootstrapContainer(title: "iOS Debug View", children: [
-            NavBar(title: "iOS Debug View", description: "Connection to device active."),
+            DefaultNavBar(),
             Jumbotron(title: "Connected to device", subtitle: "This is a subtitle"),
             Container(children: [
                 Row(children: [

@@ -11,7 +11,6 @@ import UIKit
 
 struct DeviceInfoBootstrapView: BootstrapView {
     func make() -> String {
-
         let device = UIDevice.current
         let name = device.name
         let version = "\(device.systemName) \(device.systemVersion)"

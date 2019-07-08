@@ -15,10 +15,7 @@ class ViewController: UIViewController {
         WebServer.startServer()
         
         print("Server started. Address: \(WebServer.shared.ipAddress!)")
-        
-        
-        
-        
+
         WebServer.addEvent(Event(message: "Web server started successfully"))
         WebServer.addEvent(Event(message: "Web server started successfully"))
         WebServer.addEvent(Event(message: "Web server started successfully"))
@@ -37,7 +34,6 @@ class ViewController: UIViewController {
         AnalyticsDebugger.shared.log("This is a 5", platform: "Platform 3")
         AnalyticsDebugger.shared.log("This is a 6", platform: "Platform 2")
         AnalyticsDebugger.shared.log("This is a 6", platform: "Platform 3")
-        
     }
 }
 

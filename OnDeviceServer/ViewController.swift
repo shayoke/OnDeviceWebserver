@@ -10,22 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var ipLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         WebServer.startServer()
         
-        print("Server started. Address: \(WebServer.shared.ipAddress!)")
+        ipLabel.text = "Server started. \nAddress:\n\(WebServer.shared.ipAddress!)"
 
-        WebServer.addEvent(Event(message: "Web server started successfully"))
-        WebServer.addEvent(Event(message: "Web server started successfully"))
-        WebServer.addEvent(Event(message: "Web server started successfully"))
-        WebServer.addEvent(Event(message: "Web server started successfully"))
-        WebServer.addEvent(Event(message: "Web server started successfully"))
-        WebServer.addEvent(Event(message: "Web server started successfully"))
-        WebServer.addEvent(Event(message: "Web server started successfully"))
-        WebServer.addEvent(Event(message: "Web server started successfully"))
-        WebServer.addEvent(Event(message: "Web server started successfully"))
-        
+        print("Server started. \nAddress:\n\(WebServer.shared.ipAddress!)")
         
         AnalyticsDebugger.shared.log("This is a test", platform: "Platform 1")
         AnalyticsDebugger.shared.log("This is a 2", platform: "Platform 2")

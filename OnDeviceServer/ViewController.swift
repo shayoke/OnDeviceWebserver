@@ -27,6 +27,12 @@ class ViewController: UIViewController {
         AnalyticsDebugger.shared.log("This is a 5", platform: "Platform 3")
         AnalyticsDebugger.shared.log("This is a 6", platform: "Platform 2")
         AnalyticsDebugger.shared.log("This is a 6", platform: "Platform 3")
+
+
+
+        NetworkManager.shared.fetchPosts { _ in
+
+        }
     }
 }
 

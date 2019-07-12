@@ -36,16 +36,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahB-Sk-a6V">
+                                <rect key="frame" x="20" y="818" width="361" height="44"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <state key="normal" title="Network Mocking"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="0MK-Ns-f0g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5bb-2f-j2I"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aB2-xU-QJz" secondAttribute="trailing" constant="188" id="DLG-7R-tcJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ahB-Sk-a6V" secondAttribute="bottom" id="EqU-VP-hst"/>
                             <constraint firstItem="VdY-lv-8f3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="Rw8-mk-RLW"/>
                             <constraint firstItem="VdY-lv-8f3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Suw-U5-mqG"/>
+                            <constraint firstItem="ahB-Sk-a6V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="VJf-cL-Nu6"/>
                             <constraint firstItem="0MK-Ns-f0g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="43" id="VqZ-Nr-57k"/>
                             <constraint firstItem="aB2-xU-QJz" firstAttribute="top" secondItem="0MK-Ns-f0g" secondAttribute="bottom" constant="8" symbolic="YES" id="aeA-mD-TK0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VdY-lv-8f3" secondAttribute="trailing" constant="50" id="bHd-Qe-IUg"/>
+                            <constraint firstItem="ahB-Sk-a6V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="774" id="hJn-xo-2dx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ahB-Sk-a6V" secondAttribute="trailing" constant="33" id="xJz-PF-vZx"/>
                             <constraint firstItem="aB2-xU-QJz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zCW-ys-CFc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -57,6 +66,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="97.767857142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mkt-oG-1x7">
+            <objects>
+                <viewController id="Zfb-KW-KuK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rmw-WV-134">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="E2z-Xa-kLZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xxp-cj-aEP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="896" y="101"/>
         </scene>
     </scenes>
 </document>

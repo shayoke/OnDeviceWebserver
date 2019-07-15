@@ -18,6 +18,7 @@ class WebServer {
     private init() {}
     
     let port: UInt = 8080
+    let baseURL = "localhost"
     
     static var loggingLevel: Int32 = 0 {
         didSet {

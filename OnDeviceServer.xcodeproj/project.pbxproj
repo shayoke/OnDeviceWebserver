@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B8B739022DD2C780041EBAE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8B738F22DD2C780041EBAE /* Post.swift */; };
 		0BBB9B1622B82E6D00D70EAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBB9B1522B82E6D00D70EAA /* AppDelegate.swift */; };
 		0BBB9B1822B82E6D00D70EAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBB9B1722B82E6D00D70EAA /* ViewController.swift */; };
 		0BBB9B1B22B82E6D00D70EAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BBB9B1922B82E6D00D70EAA /* Main.storyboard */; };
@@ -24,7 +25,6 @@
 		0BE640ED22CA462A008DFEE9 /* CommonComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE640EC22CA462A008DFEE9 /* CommonComponents.swift */; };
 		0BE640EF22CA628B008DFEE9 /* AnalyticsBootstrapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE640EE22CA628B008DFEE9 /* AnalyticsBootstrapView.swift */; };
 		230E142622D8AD2400528D37 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230E142522D8AD2300528D37 /* NetworkManager.swift */; };
-		23B8DC8922D877E3002AE0E8 /* NetworkMockingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B8DC8822D877E3002AE0E8 /* NetworkMockingViewController.swift */; };
 		6C479CCA9F2E5C772780D2B0 /* Pods_OnDeviceServerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07574529FA8B65EEBD32BD55 /* Pods_OnDeviceServerTests.framework */; };
 		6FBB38AF26CF55E8D9EDA48D /* Pods_OnDeviceServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 332BBE89334D25662248FE03 /* Pods_OnDeviceServer.framework */; };
 		AB519969379481F880F3111B /* Pods_OnDeviceServerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FFEF56ED5479D04482E803 /* Pods_OnDeviceServerUITests.framework */; };
@@ -49,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		07574529FA8B65EEBD32BD55 /* Pods_OnDeviceServerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnDeviceServerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B8B738F22DD2C780041EBAE /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		0BBB9B1222B82E6D00D70EAA /* OnDeviceServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnDeviceServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BBB9B1522B82E6D00D70EAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BBB9B1722B82E6D00D70EAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +73,6 @@
 		0BE640EC22CA462A008DFEE9 /* CommonComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonComponents.swift; sourceTree = "<group>"; };
 		0BE640EE22CA628B008DFEE9 /* AnalyticsBootstrapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsBootstrapView.swift; sourceTree = "<group>"; };
 		230E142522D8AD2300528D37 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		23B8DC8822D877E3002AE0E8 /* NetworkMockingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMockingViewController.swift; sourceTree = "<group>"; };
 		30FFEF56ED5479D04482E803 /* Pods_OnDeviceServerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnDeviceServerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		332BBE89334D25662248FE03 /* Pods_OnDeviceServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnDeviceServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		569230BA047C73213C2E6DA9 /* Pods-OnDeviceServerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnDeviceServerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnDeviceServerUITests/Pods-OnDeviceServerUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,14 +136,14 @@
 		0BBB9B1422B82E6D00D70EAA /* OnDeviceServer */ = {
 			isa = PBXGroup;
 			children = (
-				230E142522D8AD2300528D37 /* NetworkManager.swift */,
-				0BBB9B4A22BADC8C00D70EAA /* Webserver */,
 				0BBB9B1522B82E6D00D70EAA /* AppDelegate.swift */,
+				0BBB9B1E22B82E6E00D70EAA /* LaunchScreen.storyboard */,
+				0BBB9B4A22BADC8C00D70EAA /* Webserver */,
 				0BBB9B1722B82E6D00D70EAA /* ViewController.swift */,
-				23B8DC8822D877E3002AE0E8 /* NetworkMockingViewController.swift */,
+				230E142522D8AD2300528D37 /* NetworkManager.swift */,
+				0B8B738F22DD2C780041EBAE /* Post.swift */,
 				0BBB9B1922B82E6D00D70EAA /* Main.storyboard */,
 				0BBB9B1C22B82E6E00D70EAA /* Assets.xcassets */,
-				0BBB9B1E22B82E6E00D70EAA /* LaunchScreen.storyboard */,
 				0BBB9B2122B82E6E00D70EAA /* Info.plist */,
 			);
 			path = OnDeviceServer;
@@ -439,10 +439,10 @@
 				0BBB9B4722BAD6F200D70EAA /* BootstrapContainer.swift in Sources */,
 				0BBB9B4922BADC5200D70EAA /* BootstrapComponents.swift in Sources */,
 				0BE640EF22CA628B008DFEE9 /* AnalyticsBootstrapView.swift in Sources */,
-				23B8DC8922D877E3002AE0E8 /* NetworkMockingViewController.swift in Sources */,
 				0BBB9B1822B82E6D00D70EAA /* ViewController.swift in Sources */,
 				0BE640E722CA434A008DFEE9 /* LoremBootstrapView.swift in Sources */,
 				0BBB9B1622B82E6D00D70EAA /* AppDelegate.swift in Sources */,
+				0B8B739022DD2C780041EBAE /* Post.swift in Sources */,
 				0BE640E922CA4368008DFEE9 /* Pages.swift in Sources */,
 				0BBB9B4422B8337400D70EAA /* WebServer.swift in Sources */,
 			);

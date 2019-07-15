@@ -10,14 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var ipLabel: UILabel!
+    @IBOutlet private weak var ipLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         WebServer.startServer()
-        
-        ipLabel.text = "Server started. \nAddress:\n\(WebServer.shared.ipAddress!)"
 
+        ipLabel.text = "Server started. \nAddress:\n\(WebServer.shared.ipAddress!)"
         print("Server started. \nAddress:\n\(WebServer.shared.ipAddress!)")
         
         AnalyticsDebugger.shared.log("This is a test", platform: "Platform 1")
@@ -28,10 +27,13 @@ class ViewController: UIViewController {
         AnalyticsDebugger.shared.log("This is a 6", platform: "Platform 2")
         AnalyticsDebugger.shared.log("This is a 6", platform: "Platform 3")
 
+        NetworkManager.shared.mockNetworkOn = true
+        
+        WebServer.stub("posts",
+                       with: "[{\"body\":\"body\",\"id\":1,\"title\":\"title\",\"userId\":1}]")
 
-
-        NetworkManager.shared.fetchPosts { _ in
-
+        NetworkManager.shared.fetchPosts { result in
+            dump(result)
         }
     }
 }

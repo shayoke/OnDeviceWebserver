@@ -29,12 +29,22 @@ class WebServer {
         shared.start()
     }
     
+    public static func stub(_ path: String, with text: String) {
+        shared.interceptors[path] = text
+    }
+    
+    private var interceptors = [String: String]()
+    
     private func start() {
         WebServer.loggingLevel = 4
 
         webServer.addDefaultHandler(forMethod: "GET", request: GCDWebServerRequest.self) { request in
             let path = request.path
 
+            for (matchedPath, text) in self.interceptors where path.contains(matchedPath) {
+                return GCDWebServerDataResponse(text: text)
+            }
+            
             guard let html = Page.html(for: path, queries: request.query) else {
                 return GCDWebServerResponse(redirect: Page.indexURL, permanent: true)
             }

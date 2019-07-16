@@ -26,15 +26,6 @@ class ViewController: UIViewController {
         AnalyticsDebugger.shared.log("This is a 5", platform: "Platform 3")
         AnalyticsDebugger.shared.log("This is a 6", platform: "Platform 2")
         AnalyticsDebugger.shared.log("This is a 6", platform: "Platform 3")
-
-        NetworkManager.shared.mockNetworkOn = true
-        
-        WebServer.stub("posts",
-                       with: "[{\"body\":\"body\",\"id\":1,\"title\":\"title\",\"userId\":1}]")
-
-        NetworkManager.shared.fetchPosts { result in
-            dump(result)
-        }
     }
 }
 

@@ -25,6 +25,7 @@
 		0BE640ED22CA462A008DFEE9 /* CommonComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE640EC22CA462A008DFEE9 /* CommonComponents.swift */; };
 		0BE640EF22CA628B008DFEE9 /* AnalyticsBootstrapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE640EE22CA628B008DFEE9 /* AnalyticsBootstrapView.swift */; };
 		230E142622D8AD2400528D37 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 230E142522D8AD2300528D37 /* NetworkManager.swift */; };
+		2332EF1C22DDDE3400F7C379 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2332EF1B22DDDE3400F7C379 /* PostViewController.swift */; };
 		6C479CCA9F2E5C772780D2B0 /* Pods_OnDeviceServerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07574529FA8B65EEBD32BD55 /* Pods_OnDeviceServerTests.framework */; };
 		6FBB38AF26CF55E8D9EDA48D /* Pods_OnDeviceServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 332BBE89334D25662248FE03 /* Pods_OnDeviceServer.framework */; };
 		AB519969379481F880F3111B /* Pods_OnDeviceServerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FFEF56ED5479D04482E803 /* Pods_OnDeviceServerUITests.framework */; };
@@ -73,6 +74,7 @@
 		0BE640EC22CA462A008DFEE9 /* CommonComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonComponents.swift; sourceTree = "<group>"; };
 		0BE640EE22CA628B008DFEE9 /* AnalyticsBootstrapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsBootstrapView.swift; sourceTree = "<group>"; };
 		230E142522D8AD2300528D37 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		2332EF1B22DDDE3400F7C379 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		30FFEF56ED5479D04482E803 /* Pods_OnDeviceServerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnDeviceServerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		332BBE89334D25662248FE03 /* Pods_OnDeviceServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnDeviceServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		569230BA047C73213C2E6DA9 /* Pods-OnDeviceServerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnDeviceServerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnDeviceServerUITests/Pods-OnDeviceServerUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				0BBB9B1722B82E6D00D70EAA /* ViewController.swift */,
 				230E142522D8AD2300528D37 /* NetworkManager.swift */,
 				0B8B738F22DD2C780041EBAE /* Post.swift */,
+				2332EF1B22DDDE3400F7C379 /* PostViewController.swift */,
 				0BBB9B1922B82E6D00D70EAA /* Main.storyboard */,
 				0BBB9B1C22B82E6E00D70EAA /* Assets.xcassets */,
 				0BBB9B2122B82E6E00D70EAA /* Info.plist */,
@@ -434,6 +437,7 @@
 			files = (
 				0BE640EB22CA4590008DFEE9 /* DeviceInfoBootstrapView.swift in Sources */,
 				0BBB9B4D22BADD1200D70EAA /* IndexBootstrapView.swift in Sources */,
+				2332EF1C22DDDE3400F7C379 /* PostViewController.swift in Sources */,
 				0BE640ED22CA462A008DFEE9 /* CommonComponents.swift in Sources */,
 				230E142622D8AD2400528D37 /* NetworkManager.swift in Sources */,
 				0BBB9B4722BAD6F200D70EAA /* BootstrapContainer.swift in Sources */,

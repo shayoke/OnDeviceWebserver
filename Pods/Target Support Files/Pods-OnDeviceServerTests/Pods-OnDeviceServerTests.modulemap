@@ -1,0 +1,6 @@
+framework module Pods_OnDeviceServerTests {
+  umbrella header "Pods-OnDeviceServerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

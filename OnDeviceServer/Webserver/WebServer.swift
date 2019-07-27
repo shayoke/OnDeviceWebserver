@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import GCDWebServer
+import GCDWebServers
 
 class WebServer {
     static var shared = WebServer()

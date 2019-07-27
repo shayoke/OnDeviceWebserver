@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B043C5622ED0897005BE0F0 /* GCDWebServers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B043C5022ED0871005BE0F0 /* GCDWebServers.framework */; };
+		0B043C9222ED1705005BE0F0 /* Mockingjay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B043C8F22ED16D2005BE0F0 /* Mockingjay.framework */; };
 		0B8B739022DD2C780041EBAE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8B738F22DD2C780041EBAE /* Post.swift */; };
 		0BBB9B1622B82E6D00D70EAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBB9B1522B82E6D00D70EAA /* AppDelegate.swift */; };
 		0BBB9B1822B82E6D00D70EAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBB9B1722B82E6D00D70EAA /* ViewController.swift */; };
@@ -79,54 +80,19 @@
 			remoteGlobalIDString = E24039251BA09207000B7089;
 			remoteInfo = "Tests (Mac)";
 		};
-		0B043C6222ED08B1005BE0F0 /* PBXContainerItemProxy */ = {
+		0B043C8E22ED16D2005BE0F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0B043C5722ED08B1005BE0F0 /* GCDWebServer.xcodeproj */;
+			containerPortal = 0B043C8922ED16D2005BE0F0 /* Mockingjay.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 8DD76FB20486AB0100D96B5E;
-			remoteInfo = "GCDWebServer (Mac)";
+			remoteGlobalIDString = 2746CDBF1A702F7800719B66;
+			remoteInfo = Mockingjay;
 		};
-		0B043C6422ED08B1005BE0F0 /* PBXContainerItemProxy */ = {
+		0B043C9022ED16D2005BE0F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0B043C5722ED08B1005BE0F0 /* GCDWebServer.xcodeproj */;
+			containerPortal = 0B043C8922ED16D2005BE0F0 /* Mockingjay.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = E2DDD1F61BE69EE4002CE867;
-			remoteInfo = "GCDWebServer (iOS)";
-		};
-		0B043C6622ED08B1005BE0F0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0B043C5722ED08B1005BE0F0 /* GCDWebServer.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E2DDD1C71BE698A8002CE867;
-			remoteInfo = "GCDWebServer (tvOS)";
-		};
-		0B043C6822ED08B1005BE0F0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0B043C5722ED08B1005BE0F0 /* GCDWebServer.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CEE28CD11AE004D800F4023C;
-			remoteInfo = "GCDWebServers (Mac)";
-		};
-		0B043C6A22ED08B1005BE0F0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0B043C5722ED08B1005BE0F0 /* GCDWebServer.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = CEE28CEF1AE0051F00F4023C;
-			remoteInfo = "GCDWebServers (iOS)";
-		};
-		0B043C6C22ED08B1005BE0F0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0B043C5722ED08B1005BE0F0 /* GCDWebServer.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E2DDD18B1BE69404002CE867;
-			remoteInfo = "GCDWebServers (tvOS)";
-		};
-		0B043C6E22ED08B1005BE0F0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0B043C5722ED08B1005BE0F0 /* GCDWebServer.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E24039251BA09207000B7089;
-			remoteInfo = "Tests (Mac)";
+			remoteGlobalIDString = 2746CDCA1A702F7800719B66;
+			remoteInfo = MockingjayTests;
 		};
 		0BBB9B2722B82E6E00D70EAA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -146,7 +112,7 @@
 
 /* Begin PBXFileReference section */
 		0B043C3C22ED0871005BE0F0 /* GCDWebServer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GCDWebServer.xcodeproj; path = "../../../../Downloads/GCDWebServer-3.5.2/GCDWebServer.xcodeproj"; sourceTree = "<group>"; };
-		0B043C5722ED08B1005BE0F0 /* GCDWebServer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GCDWebServer.xcodeproj; path = "../../../../../../Downloads/GCDWebServer-3.5.2/GCDWebServer.xcodeproj"; sourceTree = "<group>"; };
+		0B043C8922ED16D2005BE0F0 /* Mockingjay.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Mockingjay.xcodeproj; path = OnDeviceServer/Webserver/Mockingjay/Mockingjay.xcodeproj; sourceTree = "<group>"; };
 		0B8B738F22DD2C780041EBAE /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		0BBB9B1222B82E6D00D70EAA /* OnDeviceServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnDeviceServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BBB9B1522B82E6D00D70EAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B043C9222ED1705005BE0F0 /* Mockingjay.framework in Frameworks */,
 				0B043C5622ED0897005BE0F0 /* GCDWebServers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,16 +188,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		0B043C5822ED08B1005BE0F0 /* Products */ = {
+		0B043C8A22ED16D2005BE0F0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0B043C6322ED08B1005BE0F0 /* GCDWebServer */,
-				0B043C6522ED08B1005BE0F0 /* GCDWebServer.app */,
-				0B043C6722ED08B1005BE0F0 /* GCDWebServer.app */,
-				0B043C6922ED08B1005BE0F0 /* GCDWebServers.framework */,
-				0B043C6B22ED08B1005BE0F0 /* GCDWebServers.framework */,
-				0B043C6D22ED08B1005BE0F0 /* GCDWebServers.framework */,
-				0B043C6F22ED08B1005BE0F0 /* Tests.xctest */,
+				0B043C8F22ED16D2005BE0F0 /* Mockingjay.framework */,
+				0B043C9122ED16D2005BE0F0 /* MockingjayTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -243,6 +205,7 @@
 				0BBB9B3422B82E6E00D70EAA /* OnDeviceServerUITests */,
 				0BBB9B1322B82E6D00D70EAA /* Products */,
 				0B043C3C22ED0871005BE0F0 /* GCDWebServer.xcodeproj */,
+				0B043C8922ED16D2005BE0F0 /* Mockingjay.xcodeproj */,
 				0B043C5522ED0897005BE0F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -304,7 +267,6 @@
 		0BBB9B4A22BADC8C00D70EAA /* Webserver */ = {
 			isa = PBXGroup;
 			children = (
-				0B043C5722ED08B1005BE0F0 /* GCDWebServer.xcodeproj */,
 				0BBB9B4B22BADCF900D70EAA /* Views */,
 				0BBB9B4522BAD6E000D70EAA /* Bootstrap */,
 				0BBB9B4322B8337400D70EAA /* WebServer.swift */,
@@ -421,8 +383,8 @@
 					ProjectRef = 0B043C3C22ED0871005BE0F0 /* GCDWebServer.xcodeproj */;
 				},
 				{
-					ProductGroup = 0B043C5822ED08B1005BE0F0 /* Products */;
-					ProjectRef = 0B043C5722ED08B1005BE0F0 /* GCDWebServer.xcodeproj */;
+					ProductGroup = 0B043C8A22ED16D2005BE0F0 /* Products */;
+					ProjectRef = 0B043C8922ED16D2005BE0F0 /* Mockingjay.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -484,53 +446,18 @@
 			remoteRef = 0B043C5322ED0871005BE0F0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		0B043C6322ED08B1005BE0F0 /* GCDWebServer */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = GCDWebServer;
-			remoteRef = 0B043C6222ED08B1005BE0F0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0B043C6522ED08B1005BE0F0 /* GCDWebServer.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = GCDWebServer.app;
-			remoteRef = 0B043C6422ED08B1005BE0F0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0B043C6722ED08B1005BE0F0 /* GCDWebServer.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = GCDWebServer.app;
-			remoteRef = 0B043C6622ED08B1005BE0F0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0B043C6922ED08B1005BE0F0 /* GCDWebServers.framework */ = {
+		0B043C8F22ED16D2005BE0F0 /* Mockingjay.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = GCDWebServers.framework;
-			remoteRef = 0B043C6822ED08B1005BE0F0 /* PBXContainerItemProxy */;
+			path = Mockingjay.framework;
+			remoteRef = 0B043C8E22ED16D2005BE0F0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		0B043C6B22ED08B1005BE0F0 /* GCDWebServers.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = GCDWebServers.framework;
-			remoteRef = 0B043C6A22ED08B1005BE0F0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0B043C6D22ED08B1005BE0F0 /* GCDWebServers.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = GCDWebServers.framework;
-			remoteRef = 0B043C6C22ED08B1005BE0F0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0B043C6F22ED08B1005BE0F0 /* Tests.xctest */ = {
+		0B043C9122ED16D2005BE0F0 /* MockingjayTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = Tests.xctest;
-			remoteRef = 0B043C6E22ED08B1005BE0F0 /* PBXContainerItemProxy */;
+			path = MockingjayTests.xctest;
+			remoteRef = 0B043C9022ED16D2005BE0F0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

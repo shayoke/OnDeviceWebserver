@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Mockingjay
 
 class ViewController: UIViewController {
     
@@ -26,6 +27,22 @@ class ViewController: UIViewController {
         AnalyticsDebugger.shared.log("This is a 5", platform: "Platform 3")
         AnalyticsDebugger.shared.log("This is a 6", platform: "Platform 2")
         AnalyticsDebugger.shared.log("This is a 6", platform: "Platform 3")
+        
+        
+        
+        Stubber().stub(everything, http(404))
+        
+        
+        NetworkManager.shared.fetchPosts { result in
+            dump(result)
+            
+            switch result {
+            case .success(let posts):
+                dump(posts)
+            case .failure(let error):
+                dump(error)
+            }
+        }
     }
 }
 

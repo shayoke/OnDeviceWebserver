@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:OnDeviceServer.xcodeproj">
+      location = "self:Mockingjay.xcodeproj">
    </FileRef>
 </Workspace>

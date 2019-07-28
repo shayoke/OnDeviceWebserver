@@ -27,8 +27,35 @@ class OnDeviceServerUITests: XCTestCase {
     }
 
     func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+        let expectation = XCTestExpectation()
+
+        sendMockserverMessage {
+            expectation.fulfill()
+        }
+
+        wait(for: [expectation], timeout: 500)
+    }
+    
+    
+    
+    func sendMockserverMessage(onComplete: @escaping () -> Void) {
+        
+        var components = URLComponents()
+        components.scheme = "http"
+        components.port = 8080
+        components.host = "localhost"
+        components.path = "/mockservermessage/"
+
+        
+        let request = URLRequest(url: components.url!)
+        
+        let task = URLSession.shared.dataTask(with: request) { data, _, error in
+            print(String(data: data ?? Data(), encoding: .utf8))
+            onComplete()
+        }
+        
+        task.resume()
     }
 
 }

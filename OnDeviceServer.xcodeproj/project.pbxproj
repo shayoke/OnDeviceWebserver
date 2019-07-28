@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		0B043C5622ED0897005BE0F0 /* GCDWebServers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B043C5022ED0871005BE0F0 /* GCDWebServers.framework */; };
 		0B043C9222ED1705005BE0F0 /* Mockingjay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B043C8F22ED16D2005BE0F0 /* Mockingjay.framework */; };
+		0B043C9322ED26BB005BE0F0 /* GCDWebServers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B043C5022ED0871005BE0F0 /* GCDWebServers.framework */; };
+		0B043C9422ED26BB005BE0F0 /* Mockingjay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B043C8F22ED16D2005BE0F0 /* Mockingjay.framework */; };
+		0B043D3222ED30EB005BE0F0 /* Mockingjay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B043C8F22ED16D2005BE0F0 /* Mockingjay.framework */; };
+		0B043D3322ED30EB005BE0F0 /* Mockingjay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B043C8F22ED16D2005BE0F0 /* Mockingjay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0B043D3722ED30F1005BE0F0 /* GCDWebServers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B043C5022ED0871005BE0F0 /* GCDWebServers.framework */; };
+		0B043D3822ED30F1005BE0F0 /* GCDWebServers.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B043C5022ED0871005BE0F0 /* GCDWebServers.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0B8B739022DD2C780041EBAE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8B738F22DD2C780041EBAE /* Post.swift */; };
 		0BBB9B1622B82E6D00D70EAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBB9B1522B82E6D00D70EAA /* AppDelegate.swift */; };
 		0BBB9B1822B82E6D00D70EAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBB9B1722B82E6D00D70EAA /* ViewController.swift */; };
@@ -94,6 +100,20 @@
 			remoteGlobalIDString = 2746CDCA1A702F7800719B66;
 			remoteInfo = MockingjayTests;
 		};
+		0B043D3422ED30EB005BE0F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B043C8922ED16D2005BE0F0 /* Mockingjay.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2746CDBE1A702F7800719B66;
+			remoteInfo = Mockingjay;
+		};
+		0B043D3922ED30F1005BE0F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B043C3C22ED0871005BE0F0 /* GCDWebServer.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = CEE28CEE1AE0051F00F4023C;
+			remoteInfo = "GCDWebServers (iOS)";
+		};
 		0BBB9B2722B82E6E00D70EAA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0BBB9B0A22B82E6D00D70EAA /* Project object */;
@@ -109,6 +129,21 @@
 			remoteInfo = OnDeviceServer;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0B043D3622ED30EC005BE0F0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0B043D3322ED30EB005BE0F0 /* Mockingjay.framework in Embed Frameworks */,
+				0B043D3822ED30F1005BE0F0 /* GCDWebServers.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0B043C3C22ED0871005BE0F0 /* GCDWebServer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GCDWebServer.xcodeproj; path = "../../../../Downloads/GCDWebServer-3.5.2/GCDWebServer.xcodeproj"; sourceTree = "<group>"; };
@@ -145,6 +180,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B043D3222ED30EB005BE0F0 /* Mockingjay.framework in Frameworks */,
+				0B043D3722ED30F1005BE0F0 /* GCDWebServers.framework in Frameworks */,
 				0B043C9222ED1705005BE0F0 /* Mockingjay.framework in Frameworks */,
 				0B043C5622ED0897005BE0F0 /* GCDWebServers.framework in Frameworks */,
 			);
@@ -161,6 +198,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B043C9322ED26BB005BE0F0 /* GCDWebServers.framework in Frameworks */,
+				0B043C9422ED26BB005BE0F0 /* Mockingjay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,10 +336,13 @@
 				0BBB9B0E22B82E6D00D70EAA /* Sources */,
 				0BBB9B0F22B82E6D00D70EAA /* Frameworks */,
 				0BBB9B1022B82E6D00D70EAA /* Resources */,
+				0B043D3622ED30EC005BE0F0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0B043D3522ED30EB005BE0F0 /* PBXTargetDependency */,
+				0B043D3A22ED30F1005BE0F0 /* PBXTargetDependency */,
 			);
 			name = OnDeviceServer;
 			productName = OnDeviceServer;
@@ -530,6 +572,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		0B043D3522ED30EB005BE0F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Mockingjay;
+			targetProxy = 0B043D3422ED30EB005BE0F0 /* PBXContainerItemProxy */;
+		};
+		0B043D3A22ED30F1005BE0F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GCDWebServers (iOS)";
+			targetProxy = 0B043D3922ED30F1005BE0F0 /* PBXContainerItemProxy */;
+		};
 		0BBB9B2822B82E6E00D70EAA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0BBB9B1122B82E6D00D70EAA /* OnDeviceServer */;
@@ -681,6 +733,7 @@
 		0BBB9B3B22B82E6E00D70EAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = OnDeviceServer/Info.plist;
@@ -698,6 +751,7 @@
 		0BBB9B3C22B82E6E00D70EAA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = OnDeviceServer/Info.plist;

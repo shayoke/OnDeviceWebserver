@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0B043C7C22ED0ADA005BE0F0 /* URITemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B043C7B22ED0ADA005BE0F0 /* URITemplate.swift */; };
 		0B043C7E22ED115A005BE0F0 /* Stubber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B043C7D22ED115A005BE0F0 /* Stubber.swift */; };
-		0B043C7F22ED139C005BE0F0 /* XCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2743679B1AA28D4D0030C97B /* XCTest.swift */; };
 		2705946B1C4FA7A6002A3AA9 /* MockingjayXCTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2705946A1C4FA7A6002A3AA9 /* MockingjayXCTestTests.swift */; };
 		274367921AA27A7C0030C97B /* Mockingjay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274367911AA27A7C0030C97B /* Mockingjay.swift */; };
 		274367941AA27AAD0030C97B /* MockingjayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274367931AA27AAD0030C97B /* MockingjayProtocol.swift */; };
@@ -306,7 +305,6 @@
 				444EA6091C5261DE000C3A9F /* MockingjayAsyncProtocolTests.swift in Sources */,
 				274367B21AA29E620030C97B /* BuildersTests.swift in Sources */,
 				2705946B1C4FA7A6002A3AA9 /* MockingjayXCTestTests.swift in Sources */,
-				0B043C7F22ED139C005BE0F0 /* XCTest.swift in Sources */,
 				2746CDD21A702F7800719B66 /* MockingjayTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
